@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { filters } from '../../utils';
+import { filters } from '../../../utils';
 
 import { FilterContainer, FilterSelect } from './Filter.styled';
 

@@ -1,10 +1,11 @@
 import React, { useCallback, useState } from 'react';
 
-import { Filter } from '../../components/Filter';
+import { Filter } from './Filter';
 
 import { EFilterValues } from '../../utils';
 
 import { HomeContainer } from './Home.styled';
+import { BarDiagram } from './BarDiagram';
 
 const defaultValue = EFilterValues.all;
 
@@ -18,7 +19,7 @@ export const Home = () => {
   return (
     <HomeContainer>
       <Filter onChange={filterHandler} defaultValue={defaultValue} />
-      <div>lol</div>
+      <BarDiagram />
     </HomeContainer>
   );
 };
