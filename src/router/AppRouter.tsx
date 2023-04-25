@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { routes } from './Routes.consts';
 
@@ -10,5 +10,6 @@ export const AppRouter = () => (
         {one?.children}
       </Route>
     ))}
+    <Route path='*' element={<Navigate to='/' />} />
   </Routes>
 );

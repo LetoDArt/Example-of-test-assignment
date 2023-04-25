@@ -3,7 +3,11 @@ import React, { useState } from 'react';
 import { Filter } from './Filter';
 import { BarDiagram } from './BarDiagram';
 
-import { useDataRequester, useFilterSelectHandler } from './Home.hooks';
+import {
+  useClickHandler,
+  useDataRequester,
+  useFilterSelectHandler,
+} from './Home.hooks';
 
 import { EFilterValues } from '../../utils';
 
@@ -18,6 +22,7 @@ export const Home = () => {
     defaultValue as keyof IData,
   );
 
+  const clickHandler = useClickHandler();
   const filterHandler = useFilterSelectHandler(setFilter);
 
   const data = useDataRequester(filter);
@@ -25,7 +30,7 @@ export const Home = () => {
   return (
     <HomeContainer>
       <Filter onChange={filterHandler} defaultValue={defaultValue} />
-      <BarDiagram data={data} />
+      <BarDiagram data={data} onClick={clickHandler} />
     </HomeContainer>
   );
 };
