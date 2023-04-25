@@ -1,6 +1,13 @@
-import React from 'react'
-import './App.css'
+import React from 'react';
 
-const App = () => <div className='App'>123</div>
+import { AppRouter } from './router';
 
-export default App
+import './App.css';
+
+const App = () => (
+  <div className='App'>
+    <AppRouter />
+  </div>
+);
+
+export default App;
