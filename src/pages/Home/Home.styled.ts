@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
+import { containerPadding } from './Home.consts';
+
 export const HomeContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: calc(100% - ${containerPadding * 2}px);
+  height: calc(100% - ${containerPadding * 2}px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-row-gap: 32px;
+  padding: ${containerPadding}px;
 `;
