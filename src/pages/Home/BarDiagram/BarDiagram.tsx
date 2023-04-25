@@ -12,7 +12,7 @@ export const BarDiagram = ({ data, onClick }: IBarDiagramProps) => {
 
   const handleEvent = {
     click: (e: EChartsOption): void => {
-      onClick && onClick({ factory: e.dataIndex, month: e.seriesIndex });
+      onClick && onClick({ factory: e.seriesIndex, month: e.dataIndex });
     },
   };
 
