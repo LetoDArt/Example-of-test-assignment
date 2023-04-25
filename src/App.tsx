@@ -2,12 +2,12 @@ import React from 'react';
 
 import { AppRouter } from './router';
 
-import './App.css';
+import { AppContainer } from './styled/root/App';
 
 const App = () => (
-  <div className='App'>
+  <AppContainer>
     <AppRouter />
-  </div>
+  </AppContainer>
 );
 
 export default App;
