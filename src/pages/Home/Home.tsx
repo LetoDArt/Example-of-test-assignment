@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import { Filter } from './Filter';
 import { BarDiagram } from './BarDiagram';
 
+import { useDataRequester, useFilterSelectHandler } from './Home.hooks';
+
 import { EFilterValues } from '../../utils';
 
 import { HomeContainer } from './Home.styled';
-import { useDataRequester, useFilterSelectHandler } from './Home.hooks';
+
 import { IData } from '../../types';
 
 const defaultValue = EFilterValues.product3;
