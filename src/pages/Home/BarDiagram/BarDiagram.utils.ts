@@ -12,6 +12,9 @@ export const getDiagramOptions = (data: EChartsOption[]) => {
     legend: {
       data: ['Фабрика А', 'Фабрика Б'],
     },
+    tooltip: {
+      trigger: 'item',
+    },
     dataset: {
       source,
     },
