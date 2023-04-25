@@ -11,7 +11,7 @@ import { HomeContainer } from './Home.styled';
 
 import { IData } from '../../types';
 
-const defaultValue = EFilterValues.product3;
+const defaultValue = EFilterValues.all;
 
 export const Home = () => {
   const [filter, setFilter] = useState<keyof IData>(
