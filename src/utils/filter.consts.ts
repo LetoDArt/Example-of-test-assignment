@@ -1,7 +1,8 @@
 export enum EFilterValues {
   all = 'all',
-  product1 = 'product_1',
-  product2 = 'product_2',
+  product1 = 'product1',
+  product2 = 'product2',
+  product3 = 'product3',
 }
 
 export interface IFilters {
@@ -21,5 +22,9 @@ export const filters: IFilters[] = [
   {
     value: EFilterValues.product2,
     label: 'Продукт 2',
+  },
+  {
+    value: EFilterValues.product3,
+    label: 'Продукт 3',
   },
 ];
