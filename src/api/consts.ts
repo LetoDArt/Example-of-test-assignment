@@ -1,7 +1,7 @@
-const base = 'http://localhost:3001';
+const BASE = 'http://localhost:3001';
 
-export const URLs = {
-  products: `${base}/products`,
+export const URLS = {
+  PRODUCTS: `${BASE}/products`,
 };
 
 export const METHODS = {
