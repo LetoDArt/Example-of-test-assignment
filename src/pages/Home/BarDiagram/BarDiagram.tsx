@@ -1,27 +1,22 @@
-import React, { useEffect, useRef } from 'react';
-import ReactECharts, { EChartsOption } from 'echarts-for-react';
+import React from 'react';
+import ReactECharts from 'echarts-for-react';
 
 import { DiagramStyle, getDiagramOptions } from './BarDiagram.utils';
 
 import { BarDiagramContainer } from './BarDiagram.styled';
 
 import { IBarDiagramProps } from './BarDiagram.types';
+import { useDiagramClick } from './BarDiagram.hooks';
 
 export const BarDiagram = ({ data, onClick }: IBarDiagramProps) => {
-  const chartRef = useRef<ReactECharts>(null);
   const options = getDiagramOptions(data);
 
-  useEffect(() => {
-    const instance = chartRef?.current?.getEchartsInstance();
-    instance?.on('click', (e: EChartsOption): void => {
-      onClick && onClick({ factory: e.seriesIndex, month: e.dataIndex });
-    });
-  }, []);
+  const diagramRef = useDiagramClick(onClick);
 
   return (
     <BarDiagramContainer>
       <ReactECharts
-        ref={chartRef}
+        ref={diagramRef}
         style={DiagramStyle}
         lazyUpdate={false}
         option={options}

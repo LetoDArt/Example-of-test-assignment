@@ -2,11 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import ReactECharts from 'echarts-for-react';
 
+import { usePieChartDataRequester } from './Details.hooks';
+
 import { DetailsChartStyles } from './Details.consts';
+import { createTitle, getPieChartOption } from './Details.utils';
 
 import { DetailsContainer } from './Details.styled';
-import { createTitle, getPieChartOption } from './Details.utils';
-import { usePieChartDataRequester } from './Details.hooks';
 
 export const Details = () => {
   const params = useParams();

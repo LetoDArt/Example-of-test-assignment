@@ -5,7 +5,7 @@ import { FactoryList, MonthList } from './Details.consts';
 import { IData } from '../../types';
 import { IPieChartData } from './Details.types';
 
-export const PieChartPattern = (): EChartsOption => [
+export const PieChartPattern = (): EChartsOption[] => [
   {
     id: 'product1',
     value: 0,

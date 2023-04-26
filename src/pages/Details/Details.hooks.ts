@@ -4,8 +4,12 @@ import { parseDataForPieChart } from './Details.utils';
 import { requestData } from '../../api/requests/diagram';
 
 import { IData } from '../../types';
+import { IPieChartData } from './Details.types';
 
-export const usePieChartDataRequester = (factory: number, month: number) => {
+export const usePieChartDataRequester = (
+  factory: number,
+  month: number,
+): IPieChartData[] => {
   const [data, setData] = useState<IData[]>([]);
 
   useEffect(() => {
